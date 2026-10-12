@@ -1,159 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#180f2e">
-<title>For Our Favourite One ♡</title>
-<style>
-:root{--night:#140d27;--plum:#28153f;--pink:#ffb8d0;--rose:#ff6f9f;--cream:#fff5f6;--lav:#d9c4ff;--gold:#ffe2a7}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--night);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.65;overflow-x:hidden}
-button{font:inherit;cursor:pointer}
-#stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.star{position:absolute;border-radius:50%;background:#fff;opacity:.6;animation:twinkle 3s ease-in-out infinite alternate}
-@keyframes twinkle{from{opacity:.15;transform:scale(.7)}to{opacity:.9;transform:scale(1.25)}}
-main,header,footer{position:relative;z-index:1}
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:34px 20px;background:radial-gradient(ellipse at 50% 20%,#59316b 0%,#28153f 36%,#140d27 78%)}
-.eyebrow{letter-spacing:.24em;text-transform:uppercase;color:var(--pink);font:12px/1.5 Arial,sans-serif}
-h1,h2,h3,p{margin-top:0}
-h1{font-size:clamp(2.8rem,9vw,6.8rem);line-height:.98;max-width:950px;margin:20px auto;color:#fff0f5;font-weight:normal}
-h1 em{color:var(--pink);font-style:normal}
-.lead{max-width:600px;margin:24px auto;color:#e6d9f4;font-size:clamp(1rem,2.8vw,1.2rem)}
-.primary,.secondary{border:1px solid #ffb8d0;border-radius:999px;padding:13px 23px;background:linear-gradient(120deg,#ff9fc1,#d6b4ff);color:#261337;box-shadow:0 8px 35px #ff8bb52b;transition:transform .2s}
-.primary:hover,.secondary:hover{transform:translateY(-2px)}
-.hidden{display:none!important}
-.reveal-card{max-width:720px;margin:28px auto 0;padding:24px;border:1px solid #ffb8d06b;border-radius:24px;background:#ffffff0a;backdrop-filter:blur(8px);animation:rise .7s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-section{padding:86px 20px;max-width:1100px;margin:auto}
-.section-head{text-align:center;max-width:720px;margin:0 auto 38px}
-h2{font-weight:normal;font-size:clamp(2rem,6vw,3.6rem);line-height:1.1;color:var(--pink)}
-.section-head p{color:#d7c9e7}
-.note{font:12px/1.5 Arial,sans-serif;color:#c7b6d8}
-.memory-grid{display:grid;grid-template-columns:repeat( auto-fit,minmax(min(100%,245px),1fr));gap:22px;align-items:start}
-.memory{margin:0;padding:12px 12px 20px;background:#fff7f1;color:#392440;box-shadow:0 16px 45px #0003;transform:rotate(var(--tilt,1deg));transition:transform .25s}
-.memory:nth-child(2n){--tilt:-1.5deg}.memory:nth-child(3n){--tilt:1.2deg}
-.memory:hover{transform:rotate(0) translateY(-5px)}
-.memory img{width:100%;height:300px;object-fit:cover;display:block;background:#e9d9e8}
-.memory.wide img{height:230px}
-.memory figcaption{padding:13px 5px 0;text-align:center;font-size:1.02rem}
-.memory figcaption small{display:block;color:#775b7a;font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
-.letter-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
-.letter{background:linear-gradient(145deg,#302046,#211431);border:1px solid #d9c4ff45;border-radius:20px;padding:22px;text-align:left;color:#f9edf9;min-height:170px}
-.letter button{width:100%;background:none;border:0;color:var(--pink);text-align:left;font-size:1.25rem;padding:0}
-.letter .prompt{font:11px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#cdbbe0;display:block;margin-bottom:12px}
-.letter .inside{margin-top:16px;color:#e9dced}
-.letter .inside p:last-child{margin-bottom:0}
-.heartline{text-align:center;color:#ffb8d0;font-size:1.4rem;letter-spacing:.2em;margin:28px 0}
-.reassure{max-width:850px;margin:auto;border:1px solid #ffb8d069;border-radius:28px;padding:clamp(24px,6vw,50px);background:linear-gradient(145deg,#38234caa,#1b122dcc);box-shadow:0 18px 70px #0003}
-.reassure h2{text-align:center}
-.reassure p{font-size:1.1rem;color:#f2e7f6}
-.reassure .center{text-align:center;color:var(--gold)}
-.final{min-height:75svh;text-align:center;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 50%,#51294f 0%,#21122f 55%,#140d27 100%);padding:70px 20px}
-.final-inner{max-width:800px}
-.final h2{font-size:clamp(2.5rem,8vw,5.2rem)}
-.signature{font:italic 1.3rem Georgia,serif;color:var(--gold);margin-top:32px}
-footer{text-align:center;padding:20px;color:#bba9cd;font:11px Arial,sans-serif;letter-spacing:.12em}
-.floating-heart{position:fixed;bottom:-30px;z-index:3;pointer-events:none;animation:floatUp 5s linear forwards;font-size:18px}
-@keyframes floatUp{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
-@media(max-width:600px){section{padding:65px 17px}.memory img{height:260px}.hero{min-height:92svh}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f5">
+  <title>To Our Fav One ♡</title>
+  <style>
+    :root{--rose:#d9577e;--deep:#843d58;--cream:#fffaf6;--pink:#fff0f5;--gold:#d6aa65}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia,'Times New Roman',serif;color:#5d3445;background:var(--cream);overflow-x:hidden}
+    .hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:48px 22px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 20%,#fff 0 4%,transparent 28%),linear-gradient(145deg,#fff8f1,#ffe8f0 60%,#fff7ec)}
+    .hero:before,.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #e6b7c7;border-radius:50%;opacity:.45}
+    .hero:before{top:-120px;left:-90px}.hero:after{bottom:-150px;right:-80px;width:360px;height:360px}
+    .hero-inner{max-width:760px;position:relative;z-index:1}
+    .eyebrow{letter-spacing:.22em;text-transform:uppercase;font:11px Arial,sans-serif;color:var(--rose)}
+    h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:normal;line-height:.98;margin:22px 0;color:var(--deep)}
+    .hero p{font-size:clamp(1.05rem,3vw,1.35rem);line-height:1.8;max-width:570px;margin:18px auto}
+    .heart{font-size:2rem;color:var(--rose);animation:pulse 1.8s infinite}
+    .button{display:inline-block;margin-top:22px;padding:14px 25px;border-radius:40px;background:var(--rose);color:white;text-decoration:none;font:14px Arial,sans-serif;letter-spacing:.04em;box-shadow:0 8px 24px #d9577e33;transition:.25s}
+    .button:hover{transform:translateY(-3px);box-shadow:0 12px 28px #d9577e44}
+    section{padding:78px 20px}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 35px}
+    .section-head h2{font-size:clamp(2rem,6vw,3.5rem);font-weight:normal;color:var(--deep);margin:12px 0}
+    .section-head p{line-height:1.8;color:#8d6574}
+    .gallery{background:#fff}
+    .photos{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+    .photo-card{background:#fffaf7;padding:10px 10px 18px;border:1px solid #f4dce4;box-shadow:0 12px 30px #8d4d6410;transform:rotate(var(--tilt,0deg));transition:transform .3s,box-shadow .3s}
+    .photo-card:hover{transform:translateY(-6px) rotate(0);box-shadow:0 18px 35px #8d4d6420}
+    .photo-card img{width:100%;height:300px;object-fit:cover;display:block;background:#f8e5eb}
+    .photo-card figcaption{text-align:center;padding:15px 5px 0;font-size:1.05rem;color:var(--deep)}
+    .letter-section{background:linear-gradient(180deg,#fff7f2,#fff0f5)}
+    .letter{max-width:790px;margin:auto;padding:clamp(24px,5vw,52px);background:#fffdfb;border:1px solid #f0d4de;box-shadow:0 18px 55px #8d4d6412;position:relative}
+    .letter:before{content:"♡";position:absolute;top:12px;right:20px;color:#e9b4c6;font-size:2rem}
+    .letter h2{text-align:center;font-size:clamp(1.8rem,5vw,2.7rem);font-weight:normal;color:var(--deep);margin:0 0 25px}
+    .letter p{font-size:1.06rem;line-height:1.95;margin:0 0 19px;white-space:pre-line}
+    .signoff{text-align:center!important;color:var(--rose);font-size:1.2rem!important;margin-top:28px!important}
+    .finale{text-align:center;background:#fff}
+    .cake{font-size:3.3rem;animation:bob 3s ease-in-out infinite}
+    .finale h2{font-size:clamp(2.2rem,7vw,4rem);font-weight:normal;color:var(--deep);margin:15px 0}
+    .finale p{max-width:570px;margin:0 auto;line-height:1.9;color:#8d6574}
+    footer{text-align:center;padding:25px 15px;background:#fff0f5;color:#9a6c7d;font-size:.9rem}
+    .float-heart{position:fixed;bottom:-30px;pointer-events:none;z-index:10;animation:rise linear forwards;opacity:.7}
+    @keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+    @keyframes pulse{50%{transform:scale(1.15)}}
+    @keyframes bob{50%{transform:translateY(-8px)}}
+    @media(max-width:520px){section{padding:58px 16px}.photo-card img{height:320px}.letter p{font-size:1rem}.hero{min-height:90svh}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+  </style>
 </head>
 <body>
-<div id="stars" aria-hidden="true"></div>
-<header class="hero">
-  <div>
-    <div class="eyebrow">a little secret, made with love ✦</div>
-    <h1>Hey, <em>Our Favourite One</em> ♡</h1>
-    <p class="lead">Before you scroll away, take one tiny breath. This little corner of the internet was made for someone who means more than she probably realises.</p>
-    <button class="primary" id="openSecret">I think this is for me… ✨</button>
-    <div class="reveal-card hidden" id="secret">
-      <p class="eyebrow">surprise, sweetheart</p>
-      <h2 style="margin-bottom:12px">It was always you. 💗</h2>
-      <p>Two people, one very special girl, and a whole lot of love that doesn't always fit into everyday messages.</p>
-      <button class="secondary" onclick="document.querySelector('#memories').scrollIntoView({behavior:'smooth'})">Open our little memory book ↓</button>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">A little page made with a lot of love</div>
+      <div class="heart">♡</div>
+      <h1>To Our<br>Fav One</h1>
+      <p>For our beautiful Janu — a little reminder that you are loved, appreciated, and so much more special than you know. 🥹💗</p>
+      <p><strong>October 20</strong> · Your day, your memories, your little surprise 🎂</p>
+      <a class="button" href="#memories">Open your surprise ♡</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-<section id="memories">
-  <div class="section-head">
-    <div class="eyebrow">little moments, big feelings</div>
-    <h2>Our memory book 📸</h2>
-    <p>Not every precious memory needs a grand story. Sometimes, a picture is enough to bring back a feeling we want to keep forever.</p>
-  </div>
-  <div class="memory-grid">
-    <figure class="memory wide"><img src="friends_group_1.jpg" alt="A group selfie together"><figcaption>One frame, so many reasons to smile.<small>our people · our moment</small></figcaption></figure>
-    <figure class="memory wide"><img src="friends_group_2.jpg" alt="Friends spending time together outdoors"><figcaption>A little memory worth keeping close.<small>together is a lovely place</small></figcaption></figure>
-    <figure class="memory"><img src="birthday_girl_saree.jpg" alt="Birthday girl in a green and orange saree"><figcaption>That smile deserves its own spotlight. ✨<small>main-character moment</small></figcaption></figure>
-    <figure class="memory"><img src="birthday_girl_red_teal.jpg" alt="Birthday girl smiling outdoors"><figcaption>May life give you a thousand reasons to smile like this. 🌿<small>little joys</small></figcaption></figure>
-    <figure class="memory"><img src="birthday_girl_closeup.jpg" alt="A close-up portrait of the birthday girl"><figcaption>A reminder that your light is yours, always. 💗<small>just being you</small></figcaption></figure>
-    <figure class="memory"><img src="birthday_girl_childhood_birthday.jpg" alt="A childhood birthday photograph"><figcaption>Look how far this little birthday star has come. 🎂<small>then & now</small></figcaption></figure>
-    <figure class="memory"><img src="birthday_girl_portrait.jpg" alt="Birthday girl in a pink and green outfit"><figcaption>Growing, glowing, becoming — one year at a time. 🌷<small>your own journey</small></figcaption></figure>
-  </div>
-  <p class="note" style="text-align:center;margin-top:22px">Made from the photos you shared. The memories are yours; the love is the message.</p>
-</section>
+  <section class="gallery" id="memories">
+    <div class="section-head">
+      <div class="eyebrow">Little moments, forever memories</div>
+      <h2>Our Janu, through the years 🌷</h2>
+      <p>From the tiniest little memories to the beautiful person you are today — every version of you deserves to be celebrated.</p>
+    </div>
+    <div class="photos">
+      <figure class="photo-card" style="--tilt:-1deg">
+        <img src="images/janu-childhood-pink.jpg" alt="Janu in a pink outfit as a little child" loading="lazy">
+        <figcaption>Our little princess 🩷</figcaption>
+      </figure>
+      <figure class="photo-card" style="--tilt:1deg">
+        <img src="images/janu-childhood-birthday.jpg" alt="Janu celebrating a childhood birthday" loading="lazy">
+        <figcaption>Little memories, endless love 🎂</figcaption>
+      </figure>
+      <figure class="photo-card" style="--tilt:-.7deg">
+        <img src="images/janu-in-traditional-red-green.jpg" alt="Janu in a traditional red and green outfit" loading="lazy">
+        <figcaption>Growing up beautifully 🌸</figcaption>
+      </figure>
+      <figure class="photo-card" style="--tilt:.8deg">
+        <img src="images/janu-in-pink-green.jpg" alt="Janu in a pink and green traditional outfit" loading="lazy">
+        <figcaption>A smile to remember 💗</figcaption>
+      </figure>
+      <figure class="photo-card" style="--tilt:-.8deg">
+        <img src="images/janu-in-yellow-green.jpg" alt="Janu in a yellow and green saree" loading="lazy">
+        <figcaption>Forever our favourite 🌼</figcaption>
+      </figure>
+    </div>
+  </section>
 
-<section>
-  <div class="section-head">
-    <div class="eyebrow">open whenever you need a reminder</div>
-    <h2>Letters for your heart 💌</h2>
-    <p>Pick a little letter. No perfect mood or perfect day required.</p>
-  </div>
-  <div class="letter-wrap">
+  <section class="letter-section" id="letter">
+    <div class="section-head">
+      <div class="eyebrow">A message from both of us</div>
+      <h2>A letter for your heart 💌</h2>
+      <p>Read this whenever you need a little reminder of how much you matter.</p>
+    </div>
     <article class="letter">
-      <span class="prompt">letter no. 01</span><button aria-expanded="false">When you feel you're not special ♡</button>
-      <div class="inside hidden"><p>You don't have to be the loudest person in the room or do something extraordinary to matter. You matter in your ordinary, quiet, imperfect moments too.</p><p>To us, you're not “just anyone.” You're our favourite one — and we're so glad this world has you in it.</p></div>
+      <h2>Happy Birthday, Beautiful! ❤️</h2>
+      <div id="letter-content">
+        <p>❤️🎂 Happy Birthday Beautiful!! 🥹💗</p>
+        <p>On your special day, there is something we both want you to understand, something that we might not always say in words, but truly wish you could feel in your heart. ❤️</p>
+        <p>We know that sometimes you overthink the smallest things, question your place in people's lives, and wonder whether you really matter to them. Sometimes, you might even feel that you are the only one trying, the only one remembering, and the only one making an effort. And maybe there are moments when you quietly tell yourself that you are not special to anyone. 🥺💔</p>
+        <p>But today, we want you to pause for a moment and remember this: your worth is not decided by who texts first, who checks on you first, or who expresses their love more often. You are valuable simply because you are you. You don't have to keep proving your importance to deserve love, care, or a place in someone's heart. ❤️🫶🏻</p>
+        <p>Please don't let your overthinking convince you that you are unwanted. Don't let a late reply, a silent day, or a little misunderstanding make you question your entire place in someone's life. Sometimes, people fail to express what they feel, but that doesn't mean you have to blame yourself or believe that you mean nothing. You deserve to feel loved without constantly wondering whether you are. 🥹💗</p>
+        <p>And if you ever feel that you are not special to us, we hope you remember this birthday message. You are someone we genuinely care about, someone we want to see happy, someone whose smile matters to us. You are not just a name in our contacts or someone we remember only on special occasions. You are a person with a beautiful heart, feelings that deserve to be understood, and dreams that deserve a chance to come true. ❤️✨</p>
+        <p>We wish we could help you see yourself through the eyes of people who care about you, because maybe then you would understand that you don't need to be perfect, always happy, or always the one making an effort to be worthy of love. You can have bad days, feel low, overthink sometimes, and still be someone worth caring for. You don't have to hide your sadness or pretend to be okay all the time. 🫂❤️</p>
+        <p>And please, never lose hope in life just because some days feel lonely. Your story is still being written. There are so many beautiful moments you haven't experienced yet, so many dreams you haven't fulfilled, and so many reasons to smile that you haven't discovered. We genuinely hope that one day, you look back at your difficult days and feel proud that you kept going. You deserve a beautiful life, not just a beautiful birthday. 🥹🦋</p>
+        <p>As you begin another year of your life, we wish you a heart that feels lighter, a mind that finds peace, people who understand you, and happiness that doesn't depend on anyone's attention. May you slowly learn to love yourself as much as you wish to be loved by others. And whenever you forget how precious you are, we hope life gives you little reminders of your worth. ❤️🧿</p>
+        <p>One thing we want you to remember forever: you don't have to be the first person to message to prove that you care, and you don't have to keep asking whether you matter to deserve reassurance. You deserve to be remembered, appreciated, and loved too. Never think that you are not enough. You are, and you always have been. 💖</p>
+        <p>Happy Birthday once again! 🎂❤️ We hope this new year of your life brings you peace where there was overthinking, hope where there was sadness, and genuine happiness where there were doubts. May you find more reasons to believe in yourself and in the beautiful life waiting ahead of you.</p>
+        <p class="signoff">Lots of love from both of us. ❤️💗</p>
+      </div>
     </article>
-    <article class="letter">
-      <span class="prompt">letter no. 02</span><button aria-expanded="false">When overthinking gets loud 🌙</button>
-      <div class="inside hidden"><p>A late reply, a quiet day, or a missed message cannot measure your worth. Thoughts can feel convincing without telling the whole story.</p><p>You don't have to solve every feeling tonight. Take things one breath, one moment, one small step at a time. You deserve gentleness, especially from yourself.</p></div>
-    </article>
-    <article class="letter">
-      <span class="prompt">letter no. 03</span><button aria-expanded="false">When you wonder if we care 💗</button>
-      <div class="inside hidden"><p>Please don't feel that you must always message first to keep your place in our lives. We may not show care perfectly every day, but your friendship matters to us.</p><p>And if we ever make you feel forgotten, tell us. We want to listen, understand, and do better — not leave you guessing.</p></div>
-    </article>
-    <article class="letter">
-      <span class="prompt">letter no. 04</span><button aria-expanded="false">A wish for your new year of life ✨</button>
-      <div class="inside hidden"><p>May this year bring you softer mornings, safe people, little adventures, unexpected laughter, and dreams that slowly start to feel possible again.</p><p>May you discover that good things can find you too — and that you never have to earn the right to be loved.</p></div>
-    </article>
-  </div>
-  <div class="heartline">♡ &nbsp; ♡ &nbsp; ♡</div>
-</section>
+  </section>
 
-<section>
-  <div class="reassure">
-    <div class="eyebrow" style="text-align:center">please keep this close</div>
-    <h2>For the days your mind is unkind to you 🌷</h2>
-    <p>Hey, favourite girl. We know sometimes the smallest things can make you wonder whether you're important to anyone. And when your mind starts collecting every little doubt, it can become hard to see the love that is already around you.</p>
-    <p>So here's what we want you to remember: <strong>you are not a burden, you are not “too much,” and you do not have to prove your importance by always reaching out first.</strong></p>
-    <p>We might not always find the perfect words or notice when you're having a difficult day. That doesn't mean your feelings are unimportant. You can tell us when something hurts; you don't have to pretend you're okay just to make things easy for everyone else.</p>
-    <p>You deserve friendships where care goes both ways, where you can ask for reassurance, laugh at silly things, be quiet when you're tired, and still feel welcome. We want to keep learning how to be those friends for you.</p>
-    <p class="center"><strong>You don't need to become someone else to be worth showing up for. You already matter. Today, tomorrow, and on the days you struggle to believe it. ♡</strong></p>
-  </div>
-</section>
-
-<section class="final">
-  <div class="final-inner">
-    <div class="eyebrow">and now, the birthday wish…</div>
-    <h2>Happy Birthday,<br><em style="color:var(--pink)">Our Favourite One</em> 🎂</h2>
-    <p style="font-size:1.13rem;color:#f0e3f5">We hope this new chapter brings you peace that stays, people who make their care clear, courage for the dreams you keep quietly in your heart, and countless moments that remind you life can still surprise you beautifully.</p>
-    <p style="font-size:1.13rem;color:#f0e3f5">Thank you for being you — for your smiles, your little ways, and the memories we get to share. You deserve to be celebrated not just today, but in the everyday moments too. We may not get every word right, but this wish comes from a very real place in both our hearts.</p>
-    <button class="primary" id="sprinkle">One last little bit of magic ✨</button>
-    <p class="signature">Lots of love from both of us.</p>
-  </div>
-</section>
-</main>
-<footer>MADE WITH ♡, JUST FOR YOU</footer>
-<script>
-const starRoot=document.getElementById('stars');
-for(let i=0;i<95;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';const z=Math.random()*3+1;s.style.width=z+'px';s.style.height=z+'px';s.style.animationDelay=Math.random()*4+'s';starRoot.appendChild(s)}
-document.getElementById('openSecret').addEventListener('click',()=>{document.getElementById('secret').classList.remove('hidden');document.getElementById('openSecret').classList.add('hidden');hearts(12)});
-document.querySelectorAll('.letter button').forEach(btn=>btn.addEventListener('click',()=>{const inside=btn.nextElementSibling;inside.classList.toggle('hidden');btn.setAttribute('aria-expanded',String(!inside.classList.contains('hidden')))}));
-function hearts(n=18){const symbols=['♡','♥','✦','✨'];for(let i=0;i<n;i++){const h=document.createElement('span');h.className='floating-heart';h.textContent=symbols[Math.floor(Math.random()*symbols.length)];h.style.left=Math.random()*100+'%';h.style.animationDuration=(3+Math.random()*3)+'s';h.style.color=['#ffb8d0','#d9c4ff','#ffe2a7'][Math.floor(Math.random()*3)];document.body.appendChild(h);setTimeout(()=>h.remove(),6500)}}
-document.getElementById('sprinkle').addEventListener('click',()=>hearts(45));
-</script>
+  <section class="finale">
+    <div class="cake">🎂</div>
+    <div class="eyebrow">October 20 · Your special day</div>
+    <h2>Happy Birthday, Janu! 💖</h2>
+    <p>May this year bring you gentle days, genuine people, peaceful thoughts, big dreams, and countless little reasons to smile. You are loved — today and always. 🦋</p>
+    <a class="button" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to the beginning ♡</a>
+  </section>
+  <footer>Made with love, just for our fav one ♡</footer>
+  <script>
+    const hearts = ["♡","♥","💗","✨"];
+    function makeHeart(){
+      const el=document.createElement("span");
+      el.className="float-heart";
+      el.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+      el.style.left=Math.random()*100+"vw";
+      el.style.fontSize=(12+Math.random()*20)+"px";
+      el.style.color=["#d9577e","#d6aa65","#bd7891"][Math.floor(Math.random()*3)];
+      el.style.animationDuration=(7+Math.random()*7)+"s";
+      document.body.appendChild(el);
+      setTimeout(()=>el.remove(),14500);
+    }
+    setInterval(makeHeart,950);
+  </script>
 </body>
 </html>
